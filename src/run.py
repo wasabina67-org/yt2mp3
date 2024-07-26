@@ -60,7 +60,8 @@ def main():
         output_videoid = f"output/{videoid}"
         mp3_file_path = output_videoid + ".mp3"
 
-        # Check MP3 existing
+        if os.path.isfile(mp3_file_path):
+            continue
 
         # check_video_deletion()
 
