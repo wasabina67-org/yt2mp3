@@ -31,7 +31,7 @@ def main():
     for item in yt_list:
         videoid = item["id"]
         output_videoid = f"output/{videoid}"
-        mp3_file_path = output_videoid + ".mp3"  # noqa
+        mp3_file_path = output_videoid + ".mp3"
 
         # Check MP3 existing
 
@@ -45,6 +45,9 @@ def main():
                 raise RuntimeError(
                     f"Downloading failed with non-zero return code. ({videoid})"
                 )
+
+            set_metadata(item["metadata"], mp3_file_path)
+            set_artwork(videoid, mp3_file_path)
 
 
 if __name__ == "__main__":
