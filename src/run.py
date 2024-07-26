@@ -1,4 +1,9 @@
+import os
+from urllib import request
+
 from mutagen.easyid3 import EasyID3
+from mutagen.id3 import APIC, ID3
+from PIL import Image
 from yt_dlp import YoutubeDL  # type: ignore
 
 from data import yt_list
@@ -18,7 +23,25 @@ ydl_opts = {
 
 
 def set_artwork(videoid, mp3_file_path):
-    pass
+    url = f"https://img.youtube.com/vi/{videoid}/0.jpg"
+    artwork_file_path = f"output/{videoid}.jpg"
+
+    with request.urlopen(url) as r:
+        data = r.read()
+        with open(artwork_file_path, mode="wb") as o:
+            o.write(data)
+
+    with Image.open(artwork_file_path) as img:
+        resized_img = img.resize((300, 300))
+        resized_img.save(artwork_file_path)
+
+    with open(artwork_file_path, mode="rb") as r:
+        data = r.read()
+        tags = ID3(mp3_file_path)
+        tags.add(APIC(mime="image/jpeg", type=3, data=data))
+        tags.save()
+
+    os.remove(artwork_file_path)
 
 
 def set_metadata(metadata, mp3_file_path):
