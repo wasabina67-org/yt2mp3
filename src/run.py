@@ -1,3 +1,4 @@
+from mutagen.easyid3 import EasyID3
 from yt_dlp import YoutubeDL  # type: ignore
 
 from data import yt_list
@@ -21,7 +22,10 @@ def set_artwork(videoid, mp3_file_path):
 
 
 def set_metadata(metadata, mp3_file_path):
-    pass
+    tags = EasyID3(mp3_file_path)
+    tags["title"] = metadata["title"]
+    tags["artist"] = metadata["artist"]
+    tags.save()
 
 
 def main():
