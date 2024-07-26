@@ -16,6 +16,14 @@ ydl_opts = {
 }
 
 
+def set_artwork(videoid, mp3_file_path):
+    pass
+
+
+def set_metadata(metadata, mp3_file_path):
+    pass
+
+
 def main():
     if not validate_yt_list():
         raise RuntimeError("Validation failed.")
