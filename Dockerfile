@@ -5,7 +5,7 @@ WORKDIR /usr/src
 COPY /src .
 COPY requirements.txt .
 
-RUN apk add --no-cache bash git
+RUN apt-get update && apt-get install -y ffmpeg
 
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
