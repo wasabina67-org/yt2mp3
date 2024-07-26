@@ -1,4 +1,4 @@
-from yt_dlp import YoutubeDL
+from yt_dlp import YoutubeDL  # type: ignore
 
 from data import yt_list
 from utils import validate_yt_list
@@ -34,7 +34,9 @@ def main():
             url = f"https://www.youtube.com/watch?v={videoid}"
             retcode = ydl.download([url])
             if retcode != 0:
-                raise RuntimeError(f"Downloading failed with non-zero return code. ({videoid})")
+                raise RuntimeError(
+                    f"Downloading failed with non-zero return code. ({videoid})"
+                )
 
 
 if __name__ == "__main__":
