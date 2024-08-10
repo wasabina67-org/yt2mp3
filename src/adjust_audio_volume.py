@@ -1,8 +1,6 @@
 import os
 
-from mutagen.easyid3 import EasyID3
 from mutagen.id3 import ID3
-from mutagen.mp3 import MP3
 from pydub import AudioSegment  # type: ignore
 
 
@@ -20,11 +18,6 @@ def main():
             current_dbfs = audio.dBFS
             adjusted_audio = audio.apply_gain(target_dbfs - current_dbfs)
             adjusted_audio.export(dest_path, format="mp3")
-
-            src_mp3 = MP3(src_path, ID3=EasyID3)
-            dest_mp3 = MP3(dest_path, ID3=EasyID3)
-            dest_mp3.update(src_mp3)
-            dest_mp3.save()
 
             src_id3 = ID3(src_path)
             dest_id3 = ID3(dest_path)
