@@ -20,3 +20,17 @@ ls output/*.mp3
 ```bash
 ls output/*.mp3 | wc -l
 ```
+
+## Adjust audio volume
+
+```bash
+python src/run.py
+```
+
+```bash
+ls output/*.mp3
+```
+
+```bash
+ls output/*.mp3 | wc -l
+```
