@@ -24,7 +24,7 @@ ls output/*.mp3 | wc -l
 ## Adjust audio volume
 
 ```bash
-python src/run.py
+python src/adjust_audio_volume.py
 ```
 
 ```bash
