@@ -14,7 +14,7 @@ def main():
             current_dbfs = audio.dBFS
             adjusted_audio = audio.apply_gain(target_dbfs - current_dbfs)
 
-            path = os.path.join(dest_dir, f"adjusted_{filename}")
+            path = os.path.join(dest_dir, filename)
             adjusted_audio.export(path, format="mp3")
 
 
