@@ -28,9 +28,9 @@ python src/adjust_audio_volume.py
 ```
 
 ```bash
-ls output/*.mp3
+ls output_adjusted/*.mp3
 ```
 
 ```bash
-ls output/*.mp3 | wc -l
+ls output_adjusted/*.mp3 | wc -l
 ```
