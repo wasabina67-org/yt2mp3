@@ -7,7 +7,7 @@ from PIL import Image
 from yt_dlp import YoutubeDL  # type: ignore
 
 from data import yt_list
-from utils import validate_yt_list
+from utils import check_video_deletion, validate_yt_list
 
 ydl_opts = {
     "format": "bestaudio/best",
@@ -63,7 +63,11 @@ def main():
         if os.path.isfile(mp3_file_path):
             continue
 
-        # check_video_deletion()
+        url = f"https://i.ytimg.com/vi/{videoid}/hqdefault.jpg"
+        if check_video_deletion(url):
+            raise RuntimeError(
+                f"The Thumbnail Image URL returned a 404 status. ({videoid})"
+            )
 
         ydl_opts["outtmpl"] = output_videoid
         with YoutubeDL(ydl_opts) as ydl:
