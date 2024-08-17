@@ -2,3 +2,7 @@ black
 flake8
 isort
 mypy
+
+mkdocs
+mkdocstrings[python]
+mkdocs-material
