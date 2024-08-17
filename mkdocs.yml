@@ -2,6 +2,8 @@ site_name: "My Docs"
 
 docs_dir: "mkdocs"
 
+site_dir: "docs"
+
 theme:
   name: "material"
 
