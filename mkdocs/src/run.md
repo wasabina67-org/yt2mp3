@@ -1,4 +1,4 @@
-# src.run
+# src/run.py
 
 ::: src.run.set_artwork
 
