@@ -1,3 +1,10 @@
 site_name: "My Docs"
 
 docs_dir: "mkdocs"
+
+theme:
+  name: "material"
+
+plugins:
+  - search
+  - mkdocstrings
