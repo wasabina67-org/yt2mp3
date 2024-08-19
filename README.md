@@ -34,3 +34,9 @@ ls output_adjusted/*.mp3
 ```bash
 ls output_adjusted/*.mp3 | wc -l
 ```
+
+## data.py maker
+
+```bash
+python src/data_py_maker.py
+```
