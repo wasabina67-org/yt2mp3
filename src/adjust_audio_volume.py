@@ -5,6 +5,9 @@ from pydub import AudioSegment  # type: ignore
 
 
 def main():
+    """
+    _summary_
+    """
     src_dir = "output"
     dest_dir = "output_adjusted"
     target_dbfs = -14
