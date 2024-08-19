@@ -40,3 +40,13 @@ ls output_adjusted/*.mp3 | wc -l
 ```bash
 python src/data_py_maker.py
 ```
+
+## mkdocs
+
+```bash
+mkdocs serve
+```
+
+```bash
+mkdocs build
+```
