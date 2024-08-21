@@ -23,6 +23,13 @@ ydl_opts = {
 
 
 def set_artwork(videoid, mp3_file_path):
+    """
+    _summary_
+
+    Args:
+        videoid (_type_): _description_
+        mp3_file_path (_type_): _description_
+    """
     url = f"https://img.youtube.com/vi/{videoid}/0.jpg"
     artwork_file_path = f"output/{videoid}.jpg"
 
@@ -45,6 +52,13 @@ def set_artwork(videoid, mp3_file_path):
 
 
 def set_metadata(metadata, mp3_file_path):
+    """
+    _summary_
+
+    Args:
+        metadata (_type_): _description_
+        mp3_file_path (_type_): _description_
+    """
     tags = EasyID3(mp3_file_path)
     tags["title"] = metadata["title"]
     tags["artist"] = metadata["artist"]
@@ -52,6 +66,17 @@ def set_metadata(metadata, mp3_file_path):
 
 
 def main():
+    """
+    _summary_
+
+    Raises:
+        RuntimeError: _description_
+        RuntimeError: _description_
+        RuntimeError: _description_
+
+    Returns:
+        _type_: _description_
+    """
     if not validate_yt_list():
         raise RuntimeError("Validation failed.")
 
