@@ -4,6 +4,12 @@ from data import yt_list
 
 
 def validate_yt_list():
+    """
+    _summary_
+
+    Returns:
+        _type_: _description_
+    """
     seen_ids = set()
     seen_title_artist = set()
 
@@ -42,6 +48,15 @@ def validate_yt_list():
 
 
 def check_video_deletion(url):
+    """
+    _summary_
+
+    Args:
+        url (_type_): _description_
+
+    Returns:
+        _type_: _description_
+    """
     resp = requests.head(url)
     if resp.status_code == 404:
         return True
