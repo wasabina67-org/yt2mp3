@@ -65,7 +65,7 @@ def set_metadata(metadata, mp3_file_path):
     tags.save()
 
 
-def main():
+def main() -> None:
     """
     Downloads YouTube videos as MP3 files, validates data.py, and sets metadata.
 

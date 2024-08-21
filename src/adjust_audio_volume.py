@@ -4,7 +4,7 @@ from mutagen.id3 import ID3
 from pydub import AudioSegment  # type: ignore
 
 
-def main():
+def main() -> None:
     """
     Adjust the volume of audio files in a directory to a target dBFS.
 

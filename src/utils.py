@@ -3,7 +3,7 @@ import requests  # type: ignore
 from data import yt_list
 
 
-def validate_yt_list():
+def validate_yt_list() -> bool:
     """
     Validates the YouTube video list.
 
@@ -47,7 +47,7 @@ def validate_yt_list():
         return True
 
 
-def check_video_deletion(url):
+def check_video_deletion(url) -> bool:
     """
     Check video deletion.
 
