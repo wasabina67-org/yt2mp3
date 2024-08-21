@@ -67,15 +67,15 @@ def set_metadata(metadata, mp3_file_path):
 
 def main():
     """
-    _summary_
+    Downloads YouTube videos as MP3 files, validates data.py, and sets metadata.
 
     Raises:
-        RuntimeError: _description_
-        RuntimeError: _description_
-        RuntimeError: _description_
+        RuntimeError: Raised if Validation fails.
+        RuntimeError: Raised if Thumbnail Image URL returns a 404 status.
+        RuntimeError: Raised if Downloading fails with non-zero return code.
 
     Returns:
-        _type_: _description_
+        None
     """
     if not validate_yt_list():
         raise RuntimeError("Validation failed.")
