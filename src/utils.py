@@ -5,10 +5,10 @@ from data import yt_list
 
 def validate_yt_list():
     """
-    _summary_
+    Validates the YouTube video list.
 
     Returns:
-        _type_: _description_
+        bool: True if validation is successful, False if any check fails.
     """
     seen_ids = set()
     seen_title_artist = set()
@@ -49,13 +49,13 @@ def validate_yt_list():
 
 def check_video_deletion(url):
     """
-    _summary_
+    Check video deletion.
 
     Args:
-        url (_type_): _description_
+        url (str): Thumbnail Image URL
 
     Returns:
-        _type_: _description_
+        bool: True if the video is deleted, False otherwise.
     """
     resp = requests.head(url)
     if resp.status_code == 404:
