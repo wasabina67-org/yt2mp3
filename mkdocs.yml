@@ -4,6 +4,8 @@ docs_dir: "mkdocs"
 
 site_dir: "docs"
 
+site_url: "https://wasabina67-org.github.io/yt2mp3/"
+
 theme:
   name: "material"
 
