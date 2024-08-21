@@ -24,11 +24,11 @@ ydl_opts = {
 
 def set_artwork(videoid, mp3_file_path):
     """
-    _summary_
+    Set artwork from YouTube thumbnail.
 
     Args:
-        videoid (_type_): _description_
-        mp3_file_path (_type_): _description_
+        videoid (str): YouTube Video ID
+        mp3_file_path (str): MP3 file Path
     """
     url = f"https://img.youtube.com/vi/{videoid}/0.jpg"
     artwork_file_path = f"output/{videoid}.jpg"
@@ -53,11 +53,11 @@ def set_artwork(videoid, mp3_file_path):
 
 def set_metadata(metadata, mp3_file_path):
     """
-    _summary_
+    Set Metadata from metadata dict.
 
     Args:
-        metadata (_type_): _description_
-        mp3_file_path (_type_): _description_
+        metadata (dict): metadata dict in data.py
+        mp3_file_path (str): MP3 file Path
     """
     tags = EasyID3(mp3_file_path)
     tags["title"] = metadata["title"]
