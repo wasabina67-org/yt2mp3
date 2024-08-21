@@ -7,6 +7,9 @@ from pydub import AudioSegment  # type: ignore
 def main():
     """
     Adjust the volume of audio files in a directory to a target dBFS.
+
+    Returns:
+        None
     """
     src_dir = "output"
     dest_dir = "output_adjusted"
