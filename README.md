@@ -36,7 +36,8 @@ ls output_adjusted/*.mp3 | wc -l
 ```
 
 ## data.py maker
-https://github.com/wasabina67-org/yt2mp3/issues/3
+
+[Generate data.py using YouTube API #3](https://github.com/wasabina67-org/yt2mp3/issues/3)
 
 ```bash
 python src/data_py_maker.py
