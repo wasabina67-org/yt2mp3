@@ -163,3 +163,4 @@ cython_debug/
 
 src/data.py
 output/*.mp3
+output_adjusted/*.mp3
