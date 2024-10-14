@@ -44,7 +44,7 @@ def validate_yt_list() -> bool:
             return False
         seen_title_artist.add(title_artist)
 
-        return True
+    return True
 
 
 def check_video_deletion(url) -> bool:
